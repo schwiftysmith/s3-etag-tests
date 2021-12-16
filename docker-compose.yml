@@ -1,0 +1,11 @@
+version: '2'
+
+services:
+  s3:
+    image: chrislusf/seaweedfs
+    command: 'server -s3 -s3.config=/auth/config.json'
+    ports:
+      - 8333:8333
+    volumes:
+      - "./config.json:/auth/config.json"
+    
